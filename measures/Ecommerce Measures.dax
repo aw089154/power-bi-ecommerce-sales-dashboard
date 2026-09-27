@@ -1,0 +1,52 @@
+// Create a table named "Measures" and add the measures below.
+
+Total Sales =
+SUM ( Sales[Sales] )
+
+Total Profit =
+SUM ( Sales[Profit] )
+
+Total Orders =
+DISTINCTCOUNT ( Sales[Order ID] )
+
+Total Customers =
+DISTINCTCOUNT ( Sales[Customer ID] )
+
+Profit Margin =
+DIVIDE ( [Total Profit], [Total Sales], 0 )
+
+Average Order Value =
+DIVIDE ( [Total Sales], [Total Orders], 0 )
+
+Total Quantity =
+SUM ( Sales[Quantity] )
+
+Average Discount =
+AVERAGE ( Sales[Discount] )
+
+Sales LY =
+CALCULATE ( [Total Sales], SAMEPERIODLASTYEAR ( 'Date'[Date] ) )
+
+Sales YoY % =
+DIVIDE ( [Total Sales] - [Sales LY], [Sales LY], 0 )
+
+Profit LY =
+CALCULATE ( [Total Profit], SAMEPERIODLASTYEAR ( 'Date'[Date] ) )
+
+Profit YoY % =
+DIVIDE ( [Total Profit] - [Profit LY], [Profit LY], 0 )
+
+Loss-Making Product Count =
+COUNTROWS (
+    FILTER (
+        VALUES ( Sales[Product Name] ),
+        CALCULATE ( [Total Profit] ) < 0
+    )
+)
+
+Customer Rank by Sales =
+RANKX ( ALL ( Sales[Customer Name] ), [Total Sales],, DESC, DENSE )
+
+Product Rank by Sales =
+RANKX ( ALL ( Sales[Product Name] ), [Total Sales],, DESC, DENSE )
+
