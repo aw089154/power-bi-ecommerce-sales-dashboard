@@ -1,0 +1,14 @@
+{
+  "name": "E-Commerce Midnight",
+  "dataColors": ["#2DD4BF", "#38BDF8", "#A78BFA", "#FBBF24", "#FB7185", "#94A3B8"],
+  "background": "#0B1120",
+  "foreground": "#E5E7EB",
+  "tableAccent": "#2DD4BF",
+  "good": "#2DD4BF",
+  "neutral": "#FBBF24",
+  "bad": "#FB7185",
+  "maximum": "#2DD4BF",
+  "center": "#FBBF24",
+  "minimum": "#FB7185"
+}
+
