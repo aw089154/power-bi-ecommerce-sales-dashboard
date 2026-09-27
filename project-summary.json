@@ -1,0 +1,23 @@
+{
+  "rows": 1953,
+  "orders": 1150,
+  "customers": 239,
+  "total_sales": 930546.35,
+  "total_profit": 139905.81,
+  "profit_margin": 0.150348,
+  "average_order_value": 809.17,
+  "top_category": "Technology",
+  "top_region": "West",
+  "top_city": "Seattle",
+  "top_product": "Pulse Pro Smartphone",
+  "loss_products": [
+    {
+      "product": "LiftPro Standing Desk",
+      "profit": -18160.89
+    },
+    {
+      "product": "Oakline Writing Desk",
+      "profit": -9090.41
+    }
+  ]
+}
